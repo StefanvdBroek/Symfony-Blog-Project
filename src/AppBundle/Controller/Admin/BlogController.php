@@ -29,7 +29,7 @@ use Symfony\Component\HttpFoundation\Request;
  *
  * See http://knpbundles.com/keyword/admin
  *
- * @Route("/admin/post")
+ * @Route("/admin")
  * @Security("has_role('ROLE_ADMIN')")
  *
  * @author Ryan Weaver <weaverryan@gmail.com>
