@@ -48,9 +48,10 @@ class PostType extends AbstractType
             ->add('summary', TextareaType::class, [
                 'label' => 'label.summary',
             ])
-            ->add('content', null, [
-                'attr' => ['rows' => 20],
+            ->add('content', TextareaType::class, [
+                'attr' => ['rows' => 20, 'class' => 'tinymce',],
                 'label' => 'label.content',
+
             ])
             ->add('publishedAt', DateTimePickerType::class, [
                 'label' => 'label.published_at',
