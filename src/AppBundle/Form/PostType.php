@@ -23,6 +23,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
  *
  * @author Ryan Weaver <weaverryan@gmail.com>
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
+ * @author Stefan van den Broek <stefan@soweare.nl>
  */
 class PostType extends AbstractType
 {
