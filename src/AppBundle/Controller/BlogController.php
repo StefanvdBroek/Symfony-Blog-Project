@@ -28,7 +28,7 @@ use Symfony\Component\HttpFoundation\Response;
 /**
  * Controller used to manage blog contents in the public part of the site.
  *
- * @Route("/blog")
+ * @Route("/")
  *
  * @author Ryan Weaver <weaverryan@gmail.com>
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
@@ -46,7 +46,7 @@ class BlogController extends Controller
      * Content-Type header for the response.
      * See http://symfony.com/doc/current/quick_tour/the_controller.html#using-formats
      */
-    public function indexAction($page, $_format)
+    public function indexAction($page = 1, $_format = 'html')
     {
         $posts = $this->getDoctrine()->getRepository(Post::class)->findLatest($page);
 
