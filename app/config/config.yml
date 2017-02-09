@@ -65,12 +65,12 @@ doctrine:
         url: "%env(DATABASE_URL)%"
 
         # instead of using a URL, you may also uncomment the following lines to configure your database
-        # driver:   pdo_mysql
+        driver:   pdo_mysql
         # host:     "%database_host%"
         # port:     "%database_port%"
-        # dbname:   "%database_name%"
+        dbname:   "%database_name%"
         # user:     "%database_user%"
-        # password: "%database_password%"
+        password: "%database_password%"
         # charset:  UTF8
 
     orm:
