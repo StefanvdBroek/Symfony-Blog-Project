@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="AppBundle\Repository\PostRepository")
- * @ORM\Table(name="symfony_demo_post")
+ * @ORM\Table(name="blog_post")
  *
  * Defines the properties of the Post entity to represent the blog posts.
  *
@@ -19,6 +19,7 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * @author Ryan Weaver <weaverryan@gmail.com>
  * @author Javier Eguiluz <javier.eguiluz@gmail.com>
+ * @author Stefan van den Broek <stefan@soweare.nl>
  */
 class Post
 {
