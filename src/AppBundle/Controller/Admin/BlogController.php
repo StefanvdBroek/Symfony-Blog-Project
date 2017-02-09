@@ -64,7 +64,7 @@ class BlogController extends Controller
     /**
      * Creates a new Post entity.
      *
-     * @Route("/new", name="admin_post_new")
+     * @Route("/post/new", name="admin_post_new")
      * @Method({"GET", "POST"})
      *
      * NOTE: the Method annotation is optional, but it's a recommended practice
@@ -115,7 +115,7 @@ class BlogController extends Controller
     /**
      * Finds and displays a Post entity.
      *
-     * @Route("/{id}", requirements={"id": "\d+"}, name="admin_post_show")
+     * @Route("/post/{id}", requirements={"id": "\d+"}, name="admin_post_show")
      * @Method("GET")
      */
     public function showAction(Post $post)
@@ -132,7 +132,7 @@ class BlogController extends Controller
     /**
      * Displays a form to edit an existing Post entity.
      *
-     * @Route("/{id}/edit", requirements={"id": "\d+"}, name="admin_post_edit")
+     * @Route("/post/{id}/edit", requirements={"id": "\d+"}, name="admin_post_edit")
      * @Method({"GET", "POST"})
      */
     public function editAction(Post $post, Request $request)
@@ -163,7 +163,7 @@ class BlogController extends Controller
     /**
      * Deletes a Post entity.
      *
-     * @Route("/{id}/delete", name="admin_post_delete")
+     * @Route("/post/{id}/delete", name="admin_post_delete")
      * @Method("POST")
      * @Security("is_granted('delete', post)")
      *

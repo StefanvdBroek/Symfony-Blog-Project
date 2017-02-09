@@ -29,9 +29,10 @@ class BlogControllerTest extends WebTestCase
     public function testIndex()
     {
         $client = static::createClient();
-        $crawler = $client->request('GET', '/en/blog/');
+        $crawler = $client->request('GET', '/en/');
 
-        $this->assertCount(
+            //this will fail if you haven't that mutch posts
+            $this->assertCount(
             Post::NUM_ITEMS,
             $crawler->filter('article.post'),
             'The homepage displays the right number of posts.'
@@ -41,13 +42,14 @@ class BlogControllerTest extends WebTestCase
     public function testRss()
     {
         $client = static::createClient();
-        $crawler = $client->request('GET', '/en/blog/rss.xml');
+        $crawler = $client->request('GET', '/en/rss.xml');
 
         $this->assertSame(
             'text/xml; charset=UTF-8',
             $client->getResponse()->headers->get('Content-Type')
         );
 
+        //this will fail if you haven't that mutch posts
         $this->assertCount(
             Post::NUM_ITEMS,
             $crawler->filter('item'),
